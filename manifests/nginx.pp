@@ -4,7 +4,7 @@ class profile::nginx(
 
 
 	include ::nginx
-       
+      } 
         $vhosts.each |$vhost| {
             ::nginx::vhost {$vhost['fqdn']:
                 port           => $vhost['port'],
@@ -14,4 +14,3 @@ class profile::nginx(
 	}
 }
 
-}
