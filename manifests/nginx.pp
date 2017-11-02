@@ -2,7 +2,7 @@ class profile::nginx {
 
 	include ::nginx
 
-	::nginx::vhost {$facts['fqdn']:
+	::nginx::vhosts {$facts['fqdn']:
 
 	}
 }
